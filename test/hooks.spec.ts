@@ -3,7 +3,7 @@ import Calculator from "../src/calculator";
 import chai from "chai";
 chai.should();
 
-describe.only("hooks test", () => {
+describe("hooks test", () => {
   let calc: Calculator;
 
   before(() => {
