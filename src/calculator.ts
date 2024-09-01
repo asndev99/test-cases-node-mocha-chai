@@ -1,3 +1,5 @@
+import axios from "axios";
+
 class Calculator {
   add(a: number, b: number): number {
     this.logMessage("Add Two Numbers");
@@ -31,6 +33,18 @@ class Calculator {
         resolve(4);
       }, 1000);
     });
+  }
+
+  //axios request,network calls
+  async getUser() {
+    return await axios.get(`https://jsonplaceholder.typicode.com/users/1`);
+  }
+
+  async saveUser(payload: any) {
+    return await axios.post(
+      `https://jsonplaceholder.typicode.com/users`,
+      payload
+    );
   }
 }
 
